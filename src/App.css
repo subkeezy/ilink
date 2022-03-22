@@ -1,0 +1,331 @@
+@font-face {
+	font-family: 'Gilroy';
+	src: url("../fonts/Gilroy-Regular.woff2"),
+	url("../fonts/Gilroy-Regular.woff");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url("../fonts/Gilroy-Medium.woff2"),
+	url("../fonts/Gilroy-Medium.woff");
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url("../fonts/Gilroy-SemiBold.woff2"),
+	url("../fonts/Gilroy-SemiBold.woff");
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url("../fonts/Gilroy-Bold.woff2"),
+	url("../fonts/Gilroy-Bold.woff");
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'FactorA';
+	src: url("../fonts/FactorAMedium-Regular.woff2"),
+	url("../fonts/FactorAMedium-Regular.woff");
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'FactorA';
+	src: url("../fonts/FactorA-Bold.woff2"),
+	url("../fonts/FactorA-Bold.woff");
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}
+
+.modal_content {
+	height: 1823px;
+	width: 1440px;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	pointer-events: none;
+	opacity: 0;
+
+	transition: 0.5s;
+}
+
+.modal_content.active {
+	opacity: 1;
+	pointer-events: all;
+}
+
+
+
+.App_wrapper {
+  position: relative;
+  width: 676px;
+  height: 443px;
+  margin-top: -1000px;
+  background-color: white;
+  z-index: 3;
+  transform: scale(0.5);
+  transition: 0.4s all;
+}
+
+.App_wrapper.active {
+  transform: scale(1);
+} 
+
+
+h4 {
+  position: absolute;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  margin: 24px 0 0 24px;
+  font-family: 'FactorA';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.YourName {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 72px 0 0 24px;
+  font-family: 'FactorA';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.InputName {
+  position: absolute;
+  margin: 106px 0 0 24px;
+  width: 395px;
+  height: 52px;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  font-family: 'Gilroy';
+  font-size: 14px;
+  font-weight: 400px;
+  line-height: 22px;
+  padding-left: 12px;
+}
+
+
+.PhotoUploadContainer {
+	position: absolute;
+	text-align: center;
+	width: 217px;
+	margin-left: 325px;
+	margin-top: 106px;
+}
+
+.PhotoUpload {
+	display: none;
+}
+
+.PhotoUpload + label {
+	position: absolute;
+	width: 205px;
+	height: 35px;
+	position: absolute;
+	display: inline;
+	text-decoration: 0;
+	background-color: #585CC6;
+	border: 0;
+	border-radius: 2px;
+	font-family: "Gilroy";
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 18px;
+	color: white;
+	cursor: pointer;
+	z-index: 0;
+	overflow: hidden;
+	padding-top: 17px;
+	padding-left: 15px;
+}
+
+.PhotoUpload + label:hover {
+	color: white;
+}
+.PhotoUpload + label::after {
+	content: "";
+	background: #696DC8;
+	position: absolute;
+	z-index: -1;
+	padding: 0.85em 0.75em;
+	display: block;
+}
+.PhotoUpload + label::after {
+	transition: all 0.35s;
+}
+.PhotoUpload + label:hover::after {
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	transition: all 0.35s;
+}
+.PhotoUpload + label::after {
+	top: 0;
+	bottom: 0;
+	left: -100%;
+	right: 100%;
+}
+
+.photo_plus {
+	width: 14.3px;
+	height: 14.3px;
+	position: absolute;
+	margin-left: 465px;
+	margin-top: 125px;
+	cursor: pointer;
+	z-index: 1;
+}
+
+
+
+
+.YourComment {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-left: 24px;
+  margin-top: 190px;
+  font-family: 'FactorA';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.InputComment {
+  width: 628px;
+  height: 105px;
+  position: absolute;
+  margin-top: 222px;
+  margin-left: 24px;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  resize: none;
+  font-family: 'Gilroy';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  padding-left: 12px;
+}
+
+.SendComment {
+	position: absolute;
+	width: 203px;
+	height: 52px;
+	margin-left: 24px;
+	margin-top: 367px;
+	text-decoration: 0;
+	background-color: #585CC6;
+	border: 0;
+	border-radius: 2px;
+	font-family: "Gilroy";
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 18px;
+	color: white;
+	cursor: pointer;
+	z-index: 0;
+	overflow: hidden;
+}
+.SendComment:hover {
+	color: white;
+}
+.SendComment::after {
+	content: "";
+	background: #696DC8;
+	position: absolute;
+	z-index: -1;
+	padding: 0.85em 0.75em;
+	display: block;
+}
+.SendComment::after {
+	transition: all 0.35s;
+}
+.SendComment:hover::after {
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	transition: all 0.35s;
+}
+button.SendComment::after {
+	top: 0;
+	bottom: 0;
+	left: -100%;
+	right: 100%;
+}
+
+.Moderation {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #8A8A8A;
+  margin-top: 386.5px;
+  margin-left: 271px;
+  font-family: 'Gilroy';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.moderation_icon {
+  position: absolute;
+  margin-top: 385.29px;
+  margin-left: 245.29px;
+}
+
+.PhotoUploading {
+  position: absolute;
+  margin-top: 170px;
+  margin-left: 24px;
+  width: 265px;
+  height: 56px;
+  background-color: #F5F5F5;
+}
+
+.NameError {
+	position: absolute;
+	margin-top: 158px;
+	margin-left: 25px;
+	font-size: 14px;
+}
+
+.CommentError {
+	position: absolute;
+	margin-top: 350px;
+	margin-left: 25px;
+	font-size: 14px;
+
+}
+
+
